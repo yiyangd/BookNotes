@@ -31,6 +31,7 @@
  * Kernel loads the data information of the new process from PCB into registers to run
  * After the completion of the execution of the new task, the kernel switches to the old task by loading the data information of the old task from the PCB to run
   * This method is referred as state restore.
+  
  > The kernel would only save and load the CPU state while switching between the thread of the same process. It would save and load the process environment if the thread being interrupted and thread being scheduled to different processes
 
 
