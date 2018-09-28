@@ -24,8 +24,19 @@
 * When a process creates a new process using fork() operation, which of the following state is shared between the parent process and the child process?
  * Only the shared memory segments are shared between the parent process and the newly forked child process. Copies of the **stack** and the **heap** are made for the newly created process. 
 
+3.9 (P10)
+* Describe the actions taken by a kernel to context-switch between processes.
+ * Kernel saves the state of the current process running on the system in PCB in memory
+  * This method is referred as state save.
+ * Kernel loads the data information of the new process from PCB into registers to run
+ * After the completion of the execution of the new task, the kernel switches to the old task by loading the data information of the old task from the PCB to run
+  * This method is referred as state restore.
+ > The kernel would only save and load the CPU state while switching between the thread of the same process. It would save and load the process environment if the thread being interrupted and thread being scheduled to different processes
 
-3.8
+
+
+
+3.8 -- Chapter6 CPU Scheduling
 * Describe the differences among short-term, medium-term, and long-term scheduling.
  * Short-term (CPU scheduler): selects from jobs in memory those jobs that are ready to execute and allocates the CPU to them
  * Medium-term: used especially with time-sharing systems as an intermediate scheduling level. 
