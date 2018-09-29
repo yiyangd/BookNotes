@@ -55,10 +55,10 @@ Lecture Notes:
  ```
  
  * Windows Threads
-  * Implementation of the one-to-one model in kernel
+   * Implementation of the one-to-one model in kernel
  * Java
-  * Java threads are managed by JVM, which is run on top of an OS
-  * JVM specifies the interface, does NOT 
+   * Java threads are managed by JVM, which is run on top of an OS
+   * JVM specifies the interface, does NOT 
   >The Java thread API allows threads to be created and managed directly in Java programs. However, because in most instances the JVM is running on top of a host operating system, the Java thread API is generally implemented using a thread library available on the host system. This means that on Windows systems, Java threads are typically implemented using the Windows API; UNIX and Linux systems often use Pthreads.
 * Two strategies for creating multiple threads:
 > asynchronous threading and synchronous threading. With asynchronous threading, once the parent creates a child thread, the parent resumes its execution, so that the parent and child execute concurrently. Each thread runs independently of every other thread, and the parent thread need not know when its child terminates. Because the threads are independent, there is typically little data sharing between threads. Asynchronous threading is the strategy used in the multithreaded server illustrated in Figure 4.2.
