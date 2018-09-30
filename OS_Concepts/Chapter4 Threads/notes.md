@@ -17,7 +17,7 @@ Lecture Notes:
   * 1.Responsiveness.响应度高：部分阻塞，执行较冗长的操作，多线程程序仍可继续运行，增加了对用户的响应程度
   * 2.Resource Sharing.资源共享：线程`默认`共享所属进程的内存和资源,代码和数据共享的优点是它能允许一个应用程序在同一地址空间有多个不同的活动线程
   * 3.Economy.经济：Allocating memory and resources for process creation is costly. Because threads share the resources of the process to which they belong, it is more economical to create and context-switch threads
-  * 4.Scalability.
+  * 4.Scalability. 
 
 
 * Thread Libraries (Page27-28 4.4)
@@ -65,3 +65,17 @@ Lecture Notes:
 >Synchronous threading occurs when the parent thread creates one or more children and then must wait for all of its children to terminate before it resumes —the so-called fork-join strategy. Here, the threads created by the parent perform work concurrently, but the parent cannot continue until this work has been completed. Once each thread has finished its work, it terminates and joins with its parent. Only after all of the children have joined can the parent resume execution. Typically, synchronous threading involves significant data sharing among threads. For example, the parent thread may combine the results calculated by its various children. All of the following examples use synchronous threading.
  
 * Threading Issues (Page 29-35 4.5-4.6)
+  * Segmantics of fork() and exec() system calls:
+    * 
+    * A process has multiple threads, one of them calls fork()
+  * Signal handling:
+    * 
+  * Thread pools: (
+    * Create a set 
+* A Note on Linux Threads
+  * Linux refers to threads and processes as tasks
+  * Thread creation is done through `clone` system call
+  * `Clone` can be parameterized to allow different resource sharing possibilities:
+    * No sharing of resources between parent and child, the entire process is duplicated
+    * Sharing of all resources between parent and child
+      * Only p
