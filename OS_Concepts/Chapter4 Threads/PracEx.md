@@ -60,5 +60,11 @@
 
 
 4.17
-4.18
+4.18 (Homework 2.7)
+Consider a multicore system and a multithreaded program written using the many-to-many threading model. Let the number of user-level threads in the program be greater than the number of processing cores in the system. Discuss the performance implications of the following scenarios.
+a. The number of kernel threads allocated to the program is less than the number of processing cores.
+b. The number of kernel threads allocated to the program is equal to the number of processing cores.
+c. The number of kernel threads allocated to the program is greater than the number of processing cores but less than the number of user-level threads.
+
+
 4.19 X
