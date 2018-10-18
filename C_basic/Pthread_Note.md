@@ -5,8 +5,12 @@ man pthread_create
 ```
 ```C
 #include <pthread.h>
-int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void *), void *arg);
-// This function starts a new thread in the calling process. The new thread starts execution by invoking start_routine(); arg is passed as the sole argument of start_routine(). ===》 sum_runner()
+int pthread_create(pthread_t *thread, const pthread_attr_t *attr, 
+                   void *(*start_routine)(void *), void *arg);
+/* This function starts a new thread in the calling process. 
+   The new thread starts execution by invoking start_routine(); 
+   arg is passed as the sole argument of start_routine().
+*/
 ```
 
 
