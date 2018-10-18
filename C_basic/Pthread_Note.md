@@ -1,5 +1,5 @@
 ## 1. Dr. Fraser Video1
 
-```shell
+```terminal
 man pthread
 ```
