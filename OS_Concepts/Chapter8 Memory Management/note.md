@@ -41,7 +41,14 @@
 * 解决方案：采用小但专用且快速的硬件缓冲 ==> 转换表缓冲区(translation look-aside buffer, TLB)
   * Fast-lookup associative memory 快速的关联内存
   * TLB只包含页表中的一小部分条目（of currently running process)、
-  * 
+  * Lookup done in one pipeline step
+* TLB entry 由标签和值组成，64 - 1024之间
+* 满就替换（最少使用&随即替换）内核代码不替换
+* Each entry stores ASID:
+  * Identifier for process
+  * Address translation checks ASID for protection
+  * Entries for different processes can be held simultaneously
+  
 
 
 
