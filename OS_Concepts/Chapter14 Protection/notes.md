@@ -20,12 +20,20 @@
 
 ## 3. Domain of Protection 保护域
 * A process operates within a protection domain
-  * Domain = set of access rights 访问权限
-  * 
+  * Domain = set of access rights 域是访问权限的集合
+  
 * Access right = <object-name, rights-set>
   * rights-set is a subset of all valid operations that can be performed on the object
-  * 
-
+  * Domain D has the access right <file F, {read,write}>, then a process executing in domain D can both read and write file F.
+  
+* Static association 一个域和一个进程之间的静态关联
+  * Process remains in its domain forever
+  * Issues?
+  * Difficult to maintain Need to Know Principle
+* Dynamic association 动态关联
+  * Processes can switch from one domain to another to access objects or perform needed operations
+  *
+*
 ## 4. Access Matrix 访问矩阵
 * 
 
