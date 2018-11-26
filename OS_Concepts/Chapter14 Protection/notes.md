@@ -68,4 +68,5 @@
 * Subsequent accesses use the capability (for faster check)
 
 
+
 ## 8. （14.3.2） Protection in UNIX
