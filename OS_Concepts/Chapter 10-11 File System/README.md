@@ -6,22 +6,32 @@
 
 
 ## Secondary Storage Systems
-* Various storage media
 
 ## File System Challenges
-* File systems involve two `design` problems
-* Interface:
+* File systems involve two `design` problems 文件系统的两个设计问题
+* Interface: how file system looks to users
+   * Define a "file", file attributes, operations on files, and how files are organized into directories
 * Implementation:
+   * data structures and algorithms to map logical file system onto physical devices
+      * `Block allocation`, `free-space management`. searching a directory, data caching
+     
 
-## Layered Structure
-* application programs --> logical file system --> file-organization module 
---> basic file system --> I/O control --> devices
+## Layered Structure 分层设计结构
+* Goal：Efficiently support different types of devices and file systems
+* 设计中的每层利用较低层的功能创建新的功能来为更高层服务
+* application programs     
+* logical file system       ==> View files as logical blocks/ Maintain metadata 管理元数据
+* file-organization module  ==> Maps logical blocks to physical blocks 
+* basic file system 基本文件系统 ==> View data as physical blocks present in devices
+         
+* I/O control            ==> Device drivers and device-specific instructions  
+                         ==> Read/Write bit patterns to device controller
+* devices
 
 ## Interface: File Concept
 > 为了方便使用计算机系统，操作系统提供了信息存储的统一逻辑接口。
 > 操作系统对存储设备的各种属性加以抽象，从而定义了逻辑存储单元(文件),再将文件映射到物理设备上
 > 数据除非在文件中，否则不能写到外存
-> 
 * From user's perspective, a file is a storage unit
 * A file is a named collection of related information
 * Information(data) stored in a file could be of various types:
@@ -31,7 +41,7 @@
     * Executable programs 可执行程序
 
 
-## File Attributes 10.1.1
+## File Attributes 10.1.1 文件属性
 * Name -- only information kept in human-readable form
 * Identifier -- unique tag (number) identifies file within file system
 * Type -- needed for systems that support different types
@@ -40,11 +50,11 @@
 * Protection -- controls who can do reading, writing, executing
 * Time, date, and user identification -- for protection, security, and usage monitoring
 
-* Information about files are kept in a directory, which is maintained on the disk as well
+* Information about files are kept in a `directory`, which is maintained on the disk as well
     * Each file has an entry in the directory 
 * 目录存放在设备上，并在需要时分若干次调入内存
 
-## File Operations 10.1.2
+## File Operations 10.1.2 文件操作
 > 文件属于抽象数据类型，为了合适地定义文件，需要考虑有关文件的操作 
 > 操作系统提供`系统调用`对文件进行创建、写、读、定位、删除和截短
 * Create
@@ -56,9 +66,9 @@
 * More operations(copy) can be composed of these primitives
 * To perform these operations, we `open` the file (details later)
 
-## File System Interface: Directory Concept 10.3
-> 每个磁盘分区可以创建一个大的文件系统，这些部分可以组成更大的可称为卷(volume)的结构
-> 
+## File System Interface: Directory Concept 10.3 
+> 每个磁盘分区(sector)可以创建一个大的文件系统，这些部分可以组成更大的可称为卷(volume)的结构
+
 * Directory is a `logical` grouping of files
     * A directory contains an entry for each file under it
     * Some systems treat directories just as files 
