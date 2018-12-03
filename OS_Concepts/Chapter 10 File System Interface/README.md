@@ -23,9 +23,11 @@
 * logical file system       ==> View files as logical blocks/ Maintain metadata 管理元数据
 * file-organization module  ==> Maps logical blocks to physical blocks 
 * basic file system 基本文件系统 ==> View data as physical blocks present in devices
-         
+> 只需要向合适的`设备驱动程序`发送一般命令就可对`磁盘上的物理块`进行读写。
+> 每个块由其数值磁盘地址来标识(例如，驱动器1，柱面(cylinder)73，磁道(track)3，扇区(sector)10)
+
 * I/O control            ==> Device drivers and device-specific instructions  
-                         ==> Read/Write bit patterns to device controller
+                         ==> Read/Write bit patterns to device controller  
 * devices
 
 ## Interface: File Concept
@@ -82,14 +84,13 @@
     * Rename a file
     * Traverse the file system 
 
-## Directory Structure 10.3.1
-
-* Design the directory structure to achieve
+## Directory Structure 10.3.1 目录结构
+* Design the directory structure to achieve 
     * Efficiency - locating a file quickly
     * Naming - convenient to users
         * Two users can have same name for different files
         * The same file can have several different names (aliases, links)
-    * Grouping - logical grouping of files by properties 
+    * Grouping - logical grouping of files by properties
 
 * Tree-structured directories are the most common
     * Paths are intuitive for users
@@ -101,8 +102,6 @@
 ## Tree-Structured Directories 10.3.5
 * 树是最为常用的目录结构，树有根目录，系统内的每个文件都有唯一路径名
 * 每个进程都有一个当前目录
-* 
-*
 
 ## Acyclic-Graph Directories 10.3.6 无环图结构
 * When files get deleted, links may still point to it
@@ -119,11 +118,12 @@
 * Backup entire file system 
     * We may visit the same subdirectory several times
     * We may even loop for ever if we have cycles 
+    * 通用图没有环
 * Solution?
     * Bypass links during directory traversal
 
 
-## File System Mounting 10.4
+## File System Mounting 10.4 
 > 文件要先打开再使用，文件系统在被系统上的进程使用之前必须安装
 > 
 * A file system must be mounted before it can be accessed
@@ -132,16 +132,16 @@
     * Then, OS makes the new file system available 
 
 ## Virtual File Systems 11.2.3
+* Multiple file systems can be mounted at same time (typical)
+  * Disk: UFS(Unix), NTFS(Windows), ext3(Linux), …
+  * CD: iso9660
+  * File systems on other machines:
+    * Network File Systeme (NFS)
+* Each file system has its own file and directory structure, allocation methods, algorithms and data structuree, ...
+* To shield users from all these `differences`, OS implements virtual file system (VFS) layer
+* VFS provides a common interface(API) to all file systems:
+  * eg. applications use open(), read(), write(), etc.
+  * No worry about which file system is being used.
 
-## File System Implementation 11.2.1
-* To implement a file system, we need
-    * On-disk structures
-        * Directory structure, number of blocks, location of free blocks,
-
-## On-disk
-
-## In-MEmory
-## Openning  and Reading 11.2.1
-## Creating a File
 
 
