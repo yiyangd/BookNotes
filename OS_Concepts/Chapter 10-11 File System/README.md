@@ -6,10 +6,10 @@
 
 
 ## Secondary Storage Systems
-
+* Various storage media
 
 ## File System Challenges
-* File systems involve two design problems
+* File systems involve two `design` problems
 * Interface:
 * Implementation:
 
@@ -129,6 +129,7 @@
         * Directory structure, number of blocks, location of free blocks,
 
 ## On-disk
+
 ## In-MEmory
 ## Openning  and Reading 11.2.1
 ## Creating a File
