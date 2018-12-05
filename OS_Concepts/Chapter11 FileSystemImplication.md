@@ -1,7 +1,7 @@
 ## File System Implementation 
 
 ## On-disk Structures 磁盘结构
-* Boot block [引导控制块]: information to boot the OS
+* Boot block 【引导控制块】: information to boot the OS
 * Volume control block 【卷控制块】: information about the volume (partition)
   * Number of blocks, block size, free block count,...
   * UFS == superblock
@@ -85,5 +85,44 @@
 * 缺点：
   * Overhead of index blocks
     * File of `one or a few` data blocks would also need an entire index block
+* Consider a file with one index block
+* Assume each pointer takes 4 bytes, and block size is 512 bytes
+* What is the maximum file size supported?
+
+
+## Free-Space Management
+* Bit Map
+ * One bit for each block: `0 = occupied`, `1 = free`
+ * 00011110 01100000 00001111 1.......1
+ * Easy to find contiguous blocks
+ * Supported by hardware
+   * Single instruction to find offset of first bit with value 1 in a word (of 32 bits) --> fast searching
+ * Disadvantages?
+   * Bit map is stored on disk --> slow to access
+     * Solution: cache it in memory
+     * But bit maps are not small for large disks
+     * Example: 400GB disk with 1KB blocks --> 400 M blocks
+                --> 50 MB bitmap --> difficult to cache the entire bitmap
+     * May group `multiple free blocks` to reduce bitmap size
+ ![image](https://github.com/yiyangd/BookNotes/blob/master/OS_Concepts/img/a.jpg)
+* Free-Space Management:
+  * Linked List (空闲空间链表)：
+    * No waste of disk space
+    * Not easy to get contiguous space
+  * Grouping:
+    * Addresses of n free blocks are stored in the first block
+    * The last block contains addresses to the following n free blocks
+  * Counting:
+    * Keep address of 1st free block & count of following free blocks
+    * <addrFirstFreeBlock, count>
     
-    
+* Recovery
+  * System failures occur anytime
+    * Hardware defects, software bugs, external events
+  * Crashes can leave file system in inconsistent state
+    * E.g. incorrect metadata, lost data
+  * File systems should have recovery mechanisms
+  
+  * Simple consistency checking
+    * Set a bit (on disk) before metadata is to be update; reset it after metadata update is complete
+    * 
