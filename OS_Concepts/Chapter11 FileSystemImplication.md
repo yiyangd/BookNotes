@@ -104,7 +104,7 @@
      * Example: 400GB disk with 1KB blocks --> 400 M blocks
                 --> 50 MB bitmap --> difficult to cache the entire bitmap
      * May group `multiple free blocks` to reduce bitmap size
- ![image](https://github.com/yiyangd/BookNotes/blob/master/OS_Concepts/img/12_10.jpg)
+ ![image](https://github.com/yiyangd/BookNotes/blob/master/OS_Concepts/img/12_10.jpg =50x50)
 * Free-Space Management:
   * Linked List (空闲空间链表)：
     * No waste of disk space
