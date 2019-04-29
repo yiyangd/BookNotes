@@ -1,7 +1,7 @@
 ## 笔记
 * [三次握手](http://www.chenjuntong.me/2016/05/20/threeway%20handshake/)
 
-[Chapter 1 - Computer Networks and the Internet](//Chapter1.md)
+[Chapter 1 - Computer Networks and the Internet](/Chapter1.md)
 * 1.1 What is the Internet?
 * 1.2 The Network Edge
 * 1.3 The Network Core
