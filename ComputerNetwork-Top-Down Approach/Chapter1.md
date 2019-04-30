@@ -17,7 +17,9 @@
   * RFC: Request for Comments
   * IETF: Internet Engineering Task Force
   * Did you guys check out the webpage?
-  
+### 1.2 A Service Desceription
+* Infrastructure that provides services to applications:
+ - Web, VoIP, email
 ### 1.3 What Is a Protocol?
 * Human Protocols:
   * 
