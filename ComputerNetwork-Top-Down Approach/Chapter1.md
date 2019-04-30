@@ -25,4 +25,8 @@
   - Provides service options, analogous to postal service
 ### 1.3 What Is a Protocol?
 * Human Protocols:
-  * 
+  * Question format
+  * Introduction method
+* Network Protocols:
+  * Machines rather than humans
+  * all 
