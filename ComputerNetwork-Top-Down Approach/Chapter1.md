@@ -18,7 +18,7 @@
   * IETF: Internet Engineering Task Force
   * Did you guys check out the webpage?
 ### 1.2 A Service Desceription
-* <b>Infrastructure</b>-- that provides services to applications:
+* `<b>Infrastructure</b>`-- that provides services to applications:
   - Web, VoIP, email
 ### 1.3 What Is a Protocol?
 * Human Protocols:
