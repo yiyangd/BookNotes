@@ -30,3 +30,4 @@
 * Network Protocols:
   * Machines rather than humans
   * all 
+> Protocols define `format`, `order` of msgs sent and received among 
