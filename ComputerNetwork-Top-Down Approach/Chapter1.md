@@ -10,7 +10,7 @@
 * Packet Switches (包交换）: forward packets(chunks of data)
   * **routers and switches**
 * Internet: "network of networks"
-  * Interconnected ISPs (Internet Service Providers) 互联网服务供应商
+  * Interconnected `ISPs (Internet Service Providers) 互联网服务供应商`
 * **Protocols** control sending, receiving of msgs (A rule to operate)
   * e.g. TCP, IP, HTTTP, Skype, 802.11
 * Internet Standards
@@ -34,7 +34,13 @@
 
 ## 2. Network edge
 ### 2.1 Access Networks
-* 
+* DSL
+* Cable Network
 ### 2.2 Physical media
 
-## 3. 
+## 3. Network Core
+### 3.1 Packet Switching
+
+### 3.2 Circuit Switching
+* TDM
+* FDM
