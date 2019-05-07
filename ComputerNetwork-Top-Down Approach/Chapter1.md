@@ -1,6 +1,6 @@
 ## 1. What is the Internet?
 
-#### 1.1 “Nuts and bolts" view 具体细节，基本要素
+### 1.1 “Nuts and bolts" view 具体细节，基本要素
 * Millions of connected computing devices:
   * **hosts** = end systems 主机
   * running network apps
@@ -30,4 +30,11 @@
 * Network Protocols:
   * Machines rather than humans
   * all 
-> Protocols define `format`, `order` of msgs sent and received among 
+> Protocols define `format`, `order` of msgs sent and received among network entities, and `actions taken` on msg transmission, receipt
+
+## 2. Network edge
+### 2.1 Access Networks
+* 
+### 2.2 Physical media
+
+## 3. 
