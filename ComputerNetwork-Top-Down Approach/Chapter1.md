@@ -62,4 +62,15 @@
 * TDM:
 * FDM:
 
-## 4. Delay
+## 4. Delay, Loss, and Throughput in Packet-Switched Networks
+
+* Throughput(Bandwidth)
+* Delay (Latency)
+* Queueing Delay
+
+
+* Jitter
+* Delay X Throughput (Calculation)
+
+## 5. Protocol Layers and Their Service Models
+
