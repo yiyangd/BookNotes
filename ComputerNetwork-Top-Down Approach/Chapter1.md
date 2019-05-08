@@ -33,14 +33,33 @@
 > Protocols define `format`, `order` of msgs sent and received among network entities, and `actions taken` on msg transmission, receipt
 
 ## 2. Network edge
+*
 ### 2.1 Access Networks
-* DSL
-* Cable Network
-### 2.2 Physical media
+* DSL(digital subscriber line):
+  *
+* Cable Network:
+  * FDM
+* Home Networks:
+* Enterprise( Ethernet)
+* Wireless access networks
+  
+### 2.2 Physical media(P21)
+* Guided Media
+  * 
+* Unguided Media
 
 ## 3. Network Core
+* Mesh of interconnected routers
+* Providing a path between source and destination through shared network resources
+### 3.3 A network of networks (Internet Structure)
+* How to connect ISPs together?
 ### 3.1 Packet Switching
+* Hosts break application-layer messages into packets
+* routing:
+* forwarding:
 
 ### 3.2 Circuit Switching
-* TDM
-* FDM
+* TDM:
+* FDM:
+
+## 4. Delay
