@@ -4,13 +4,13 @@
 [Chapter 1 - Computer Networks and the Internet](https://github.com/yiyangd/BookNotes/blob/master/ComputerNetwork-Top-Down%20Approach/Chapter1.md)
 * 1.1 What is the Internet?
 * 1.2 The Network Edge
-* 1.3 The Network Core
+* 1.3 The Network Core (Unit 3- Packet Switching)
 * 1.4 Delay, Loss, Throughput in `Packet-Switched` Networks
 * 1.5 Protocol Layers and Their Service Models
 * 1.6 Networks under attack: security
 * 1.7 History of Computer Networking andthe Internet
 
-Chapter 2 - Application Layer
+Chapter 2 - Application Layer (Unit 5 Applications and NATs)
 * 2.1 Principles of Network Applications
 * 2.2 The Web and HTTP
 * 2.3 File Transfer: FTP
@@ -19,11 +19,16 @@ Chapter 2 - Application Layer
 * 2.6 Peer-to-Peer Applications (P2P)
 * 2.7 Socket Programming：Creating Network Applications
 
-Chapter 3 - Transport Layer
+Chapter 3 - Transport Layer (Unit 2)
 * 3.1 Intro
-* 3.6 Principl
-* 3.7 TCP Congestion Control
+* 3.2
+* 3.5
+* 3.6 Principls of Congestion Control (Unit 4)
+* 3.7 TCP Congestion Control 
 
-Chapter 4 - The Network Layer
+Chapter 4 - The Network Layer (P305, Stanford Moocs Unit 6 - Routing) 
 * 4.1 Introduction
 * 4.2 
+
+Chapter 5 - The Link Layer: Links, Access Networks, and LANs (P433, Unit 7 - Lower Layers)
+* 5.1
