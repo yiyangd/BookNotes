@@ -23,9 +23,22 @@ a. client-server architecture:
   * Permanent IP address
   * Data centers for scaling
 * Clients:
-  * 
+  * Communicate with Server
+  * May be intermittently(间断地）connected
+  * do not communicate directly with each other
 b. P2P architecture:
+  * no always-on server
+  * **arbitrary** end systems directly communicate
+  * Peers request service from other peers & provide service in return to other peers
+    * **Self Scalability**: New peers bring new service capacity as well as new service demands
+  * Peers are intermitteently connected & change IP addresses 
+    * Complex Management
+  
+  
+### 1.2 Processes Communicating
 
+
+### 1.5 Application-Layer Protocols
 |application|application layer protocol|underlying transport protocol|  
 |---|---|---|
 |email|SMTP[RFC 2821]|3   |  
