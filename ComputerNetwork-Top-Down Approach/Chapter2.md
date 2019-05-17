@@ -9,9 +9,9 @@
   * Socket API
 ## 2.1 Principles of Network Applications(slides1-16,notes1-12)
 
-| application  | application layer protocol   | underlying transport protocol  |  
+|application|application layer protocol|underlying transport protocol|  
 |---|---|---|
-|  1 |2   |3   |  
+|email|SMTP[RFC 2821]|3   |  
 |  4 |  5 |   6| 
 |  7 |  8 |   9|  
 ## 2.2 The Web and HTTP (slides17-notes13-34)
@@ -24,11 +24,11 @@
 * `telnet` 远程登录
 ### 2.2.4 User-Server Interaction: Cookies
 * Many Web sites use cookies
-# 2.3 File Transfer: FTP (not included in 371)
-# 2.4 Electronic Mail in the Internet(notes35-46)
-# 2.5 DNS - The Internet's Directory Service(notes47-60 week2 done)
+## 2.3 File Transfer: FTP (not included in 371)
+## 2.4 Electronic Mail in the Internet(notes35-46)
+## 2.5 DNS - The Internet's Directory Service(notes47-60 week2 done)
 
 
 
-# 2.6 Peer-to-Peer Applications (P2P)
-# 2.7 Socket Programming：Creating Network Applications
+## 2.6 Peer-to-Peer Applications (P2P)
+## 2.7 Socket Programming：Creating Network Applications
