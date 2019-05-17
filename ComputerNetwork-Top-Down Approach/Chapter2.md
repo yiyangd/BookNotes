@@ -7,15 +7,32 @@
   * HTTP | FTP | SMTP/POP3/IMAP | DNS
 * Creating network applications
   * Socket API
-## 2.1 Principles of Network Applications(slides1-16,notes1-12)
+## 1. Principles of Network Applications(slides1-16,notes1-12)
+* Some Network Apps: e-mail, web, text messaging, remote login, P2P file sharing...
+* Write Programs that:
+  * Run on (different) end systems
+  * Communicate over network
+  * eg. web `server` software communicates with `browser` software
+* no need to write software for `network-core devices`
+  * network-core devices do not run user applications
+  * applications on end systems allows for rapid app development, propagation
+### 1.1 Network Application Architectures
+a. client-server architecture:
+* Server: 
+  * Always-on host
+  * Permanent IP address
+  * Data centers for scaling
+* Clients:
+  * 
+b. P2P architecture:
 
 |application|application layer protocol|underlying transport protocol|  
 |---|---|---|
 |email|SMTP[RFC 2821]|3   |  
 |  4 |  5 |   6| 
 |  7 |  8 |   9|  
-## 2.2 The Web and HTTP (slides17-notes13-34)
-### 2.2.2 Non-Persisteent and Persistent Connections
+## 2.The Web and HTTP (slides17-notes13-34)
+### 2.2 Non-Persisteent and Persistent Connections
 ### 2.2.3 HTTP Message Format
 * Two types:
   * Request:
