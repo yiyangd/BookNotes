@@ -72,5 +72,20 @@
 * Jitter
 * Delay X Throughput (Calculation)
 
-## 5. Protocol Layers and Their Service Models
 
+## 5. Protocol Layers and Their Service Models
+### 5.1 Layered Architecture
+a. Networks are complex with many "pieces": hosts, routers, links of various media, applications, protocols, hardware, software
+b. **layers:** each layer implements a service
+  * via its own internal-layer actions
+  * relying on services provided by layer below
+c. Why layering? -- Dealing with complex systems:
+* Explicit structure allows identification, relationship of complex 
+d. Internet protocol stack
+e. The OSI(Open Systems Interconnection) model:
+* Addititonal two layers to five Internet Protocol Stack
+  *
+### 5.2 Encapsulation
+有一张图。。。
+## 6. Network Under Attack (Slides 47-51, Lec 56-61)
+## 7. History of Computer Networking and the Internet (Slides 52-end, lec 62-end)
