@@ -25,7 +25,7 @@ a. client-server architecture:
 * Clients:
   * Communicate with Server
   * May be intermittently(间断地）connected
-  * do not communicate directly with each other
+  * do not communicate directly with each other  
 b. P2P architecture:
   * no always-on server
   * **arbitrary** end systems directly communicate
