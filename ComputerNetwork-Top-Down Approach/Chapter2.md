@@ -52,18 +52,18 @@ b. P2P architecture:
     - POST:
     - GET:
 * `telnet` 远程登录
-### 2.2.4 User-Server Interaction: Cookies
+### 2.4 User-Server Interaction: Cookies
 * Many Web sites use cookies
 
-## 2.3 Electronic Mail in the Internet(notes35-46)
-## 2.4 DNS - The Internet's Directory Service(notes47-60 week2 done)
+## 3 Electronic Mail in the Internet(notes35-46)
+## 4 DNS - The Internet's Directory Service(notes47-60 week2 done)
 
 
 
-## 2.5 Peer-to-Peer Applications (P2P)
+## 5 Peer-to-Peer Applications (P2P)
 ## 6. Video Streaming and Content Distribution Networks
 ### 6.1 Internet Video
 ### 6.2 HTTP Streaming and DASH
 ### 6.3 CDN
 ### 6.4 Netflix
-## 2.7 Socket Programming：Creating Network Applications
+## 7 Socket Programming：Creating Network Applications
