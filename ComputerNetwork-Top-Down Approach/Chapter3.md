@@ -20,7 +20,7 @@
 * Network-Layer protocol provides logical communication between hosts （IP：Internet Protocol)
 * Transport-Layer protocol provides logical communication between processes 【running on different hosts】
 * A computer network may make available multiple transport protocols, with each protocol offering a different service model to applications.
-* Certain services can be offered by a transport protocol even when the underlying network protocol doesn't offer the corresponding service at the network layer.
+> Certain services can be offered by a transport protocol even when the underlying network protocol doesn't offer the corresponding service at the network layer.
 
 #### 1.2 Trans-Layer in the Internet
 * Reliable, in-order delivery (TCP)
