@@ -33,13 +33,17 @@
     * Delay guarantees
     * Bandwidth guarantees
 ### 2. Multiplexing and Demultiplexing 多路传输和多路分离（Services）
-* Multiplexing at sender:
+a. Multiplexing at sender:
   * Handle data from multiple sockets and add `transport header` 【later used for demultiplexing】
-* Demultiplexing at receiver:
-  * Use header information to deliver received segments to correct socket
+b. Demultiplexing at receiver:
+* Use header information to deliver received segments to correct socket
   * Host receives IP datagrams
-    * each diagram
-      * da
+    * each datagram has source IP address, destination IP address
+    * each datagram carries one transport-layer segment
+      * each segment has source, destination port number
+  * Host uses IP address & port numbers to direct segment to appropriate socket
+c. Connectionless Demultiplexing:
+* Recall:
       
 ### 3. Connectionless Transport: UDP
 
