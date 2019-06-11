@@ -33,7 +33,14 @@
     * Delay guarantees
     * Bandwidth guarantees
 ### 2. Multiplexing and Demultiplexing 多路传输和多路分离（Services）
-* 
+* Multiplexing at sender:
+  * Handle data from multiple sockets and add `transport header` 【later used for demultiplexing】
+* Demultiplexing at receiver:
+  * Use header information to deliver received segments to correct socket
+  * Host receives IP datagrams
+    * each diagram
+      * da
+      
 ### 3. Connectionless Transport: UDP
 
 
@@ -41,7 +48,11 @@
 ### 4. Principles of Reliable Data Transfer
 
 ### 5. Connection-Oriented Transport: TCP
+#### 5.1 The TCP Connection
+* 
+#### 5.2
 
+# June, 11 | WEEK 6
 ### 6. Principles of Congestion Control
 
 ### 7. TCP Congestion Control
