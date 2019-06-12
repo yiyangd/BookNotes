@@ -34,14 +34,16 @@
     * Bandwidth guarantees
 ### 2. Multiplexing and Demultiplexing 多路传输和多路分离（Services）
 a. Multiplexing at sender:
-  * Handle data from multiple sockets and add `transport header` 【later used for demultiplexing】
+  * Handle data from multiple sockets and add `transport header` 【later used for demultiplexing】 
+
 b. Demultiplexing at receiver:
 * Use header information to deliver received segments to correct socket
-  * Host receives IP datagrams
-    * each datagram has source IP address, destination IP address
-    * each datagram carries one transport-layer segment
-      * each segment has source, destination port number
-  * Host uses IP address & port numbers to direct segment to appropriate socket
+* Host receives IP datagrams
+  * each datagram has source IP address, destination IP address
+  * each datagram carries one transport-layer segment
+    * each segment has source, destination port number
+* Host uses IP address & port numbers to direct segment to appropriate socket
+
 c. Connectionless Demultiplexing:
 * Recall:
       
@@ -50,6 +52,15 @@ c. Connectionless Demultiplexing:
 
 
 ### 4. Principles of Reliable Data Transfer
+* Important in application, transport, link layers
+* Characteristics of unreliable channel will determine the complexity of data transfer protocol (rdt)
+*  `ret_send()`: called from above, (e.g. by app.). Passed data to deliver to receiver upper layer
+* `udt_send()`: called by rdt, to transfer packet over unreliable
+* `deliver_data()`: called by rdt to deliver data to upper
+* `rdt_rcv()`: called when packet arrives on rcv-side of channel
+
+#### 4.1 Building a Reliable Data Transfer Protocol
+* 
 
 ### 5. Connection-Oriented Transport: TCP
 #### 5.1 The TCP Connection
