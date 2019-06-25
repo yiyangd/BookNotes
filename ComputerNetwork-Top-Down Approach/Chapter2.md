@@ -109,19 +109,20 @@ b. UDP services
 |  7 |  8 |   9|  
 ## 2.The Web and HTTP (slides17-notes13-34)
 ### 2.1 Overview of HTTTP 
-*
+* 
 *
 * HTTP is stateless 无状态
   * Server maintains no info about past client requests
 * Uses TCP:
-  * Client initiates TCP connection, port 80
-  * Server accepts TCP connection
+  * Client **initiates TCP connection**, to server port 80
+  * Server accepts TCP connection from client
   * HTTP messages exchange
   * TCP connection close
 
 ### 2.2 Non-Persistent and Persistent Connections
-a. Non-persistent HTTTP
+a. Non-persistent HTTP
 
+* RTT: 
 
 
 ### 2.3 HTTP Message Format
@@ -133,6 +134,8 @@ a. Non-persistent HTTTP
 ### 2.4 User-Server Interaction: Cookies
 * Many Web sites use cookies
 
+### 2.5 Web Caching
+* 
 ## 3 Electronic Mail in the Internet(notes35-46)
 ## 4 DNS - The Internet's Directory Service(notes47-60 week2 done)
 
