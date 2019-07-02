@@ -81,9 +81,15 @@ a. Switching via Memory:
 * Traditional computers with switching under direct control of CPU
 * Packet copied to system's memory
 * Speed limited by memory bandwidth
-b. Switching via a Bus
-c. Switching via an interconnection network
 
+b. Switching via a Bus
+* Datagram from input port memory tto output port memory via a shared bus
+* `Bus contention`: switching speed limited by bus bandwidth
+* 32 Gbps bus, Cisco 5600: sufficient speed for accesss and enterprise routers
+
+c. Switching via an interconnection network
+* Overcome bus bandwidtth limitations
+* Banyan networks 榕树网络， Crossbar,
 ### 2.3 Output Port Processing
 
 
@@ -113,6 +119,8 @@ c. CIDR
 d. DHCP  
 
 ### 3.4 Network Address Translation (NAT) (note 49 - 55)
+
+
 
 
 
