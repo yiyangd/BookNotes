@@ -31,7 +31,7 @@
     * In-order packet delivery
     * Guaranteed minimum bandwidth to flow
     * Restrictions on changes in inter-packet spacing
-  - TODO: 5 models
+  - TODO: 5 models： best effort, CBR, VBR, ABR, UBR
     
   
   
@@ -41,14 +41,48 @@
 - **Figure4.5 in books**
 - Input Port Functions:
   * Line termination:
-  * Link layer prottocol
+  * Link layer protocol
   * Lookup, forwarding queueing: 
-    * Decentralized Switching:
+    * Decentralized Switching: 
+      * Using header field values, `lookup` output port using forwarding table input port memory (**"match plus action"**)
+      * Goal: complete input port processing at "line speed"
+      * Queuing: if datagrams arrive faster than forwarding rate into switch fabric
+      * destination-based forwarding: forward based `only` on destination IP address (traditional)
+      * Generalized forwarding: forward based on `any set of` header field values
+- Destination-Based Forwarding Table
+  * ranges divide up so nicely
+|Destination Address Range|Link interface| 
+|---|---|
+|00010000-00010111|0|
+|00011000-00011000|1|
+|00011001-00011111|2|
+|otherwise|3|
 
-### 2.2 Switching
-- Switching via Memory
-- Switching via a Bus
-- Switching via an interconnection network
+- Longest Prefix Maching
+  * When looking for forwarding table entry for given destination address, use `longest` address prefix that matches destination address.
+  * when there are multiple matches, the `router` uses the longest prefix matching rule
+|Destination Address Range|Link Interface| 
+|---|---|
+|00010*** ********|0|
+|00011000 ********|1|
+|00011*** ********|2|
+|otherwise|3|
+
+
+
+### 2.2 Switching(notes16)
+* Transfer packet from input buffer to appropriate output buffer
+* Switching rate: rate at which packets can be transfer from inputs to outputs
+  * Often measured as `multiple of input/output` line rate
+  * N inputs: switching rate `N times` line rate desirable
+* Three types of switching fabrics:
+
+a. Switching via Memory:
+* Traditional computers with switching under direct control of CPU
+* Packet copied to system's memory
+* Speed limited by memory bandwidth
+b. Switching via a Bus
+c. Switching via an interconnection network
 
 ### 2.3 Output Port Processing
 
@@ -60,7 +94,7 @@ c. Round Robin
 d. WFQ
 
 ## 3. The Internet Protocol(IP) (note 28)
-- **Figure 4.16 IPv4 datagram format**
+- **Figure 4.16 - IPv4 datagram format**
 ### 3.1 IPv4 Datagram Format
 - Version number
 - Header length
@@ -69,7 +103,7 @@ d. WFQ
 ---
 - Identifier, flags, fragmentation offset
 - Time-to-live
-- Protocol
+- Protocol 
 - 
 ### 3.2 IPv4 Datagram Fragmentation and Reassembly
 ### 3.3 IPv4 Addressing(note 32)
