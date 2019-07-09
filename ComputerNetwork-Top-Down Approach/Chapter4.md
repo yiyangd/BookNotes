@@ -51,6 +51,7 @@
       * Generalized forwarding: forward based on `any set of` header field values
 - Destination-Based Forwarding Table
   * ranges divide up so nicely
+  
 |Destination Address Range|Link interface| 
 |---|---|
 |00010000-00010111|0|
@@ -61,11 +62,12 @@
 - Longest Prefix Maching
   * When looking for forwarding table entry for given destination address, use `longest` address prefix that matches destination address.
   * when there are multiple matches, the `router` uses the longest prefix matching rule
+
 |Destination Address Range|Link Interface| 
 |---|---|
-|00010*** ********|0|
-|00011000 ********|1|
-|00011*** ********|2|
+|00010*** ******** |0|
+|00011000 ******** |1|
+|00011*** ******** |2|
 |otherwise|3|
 
 
