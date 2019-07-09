@@ -88,27 +88,55 @@ b. Switching via a Bus
 * 32 Gbps bus, Cisco 5600: sufficient speed for accesss and enterprise routers
 
 c. Switching via an interconnection network
-* Overcome bus bandwidtth limitations
-* Banyan networks 榕树网络， Crossbar,
+* Overcome bus bandwidth limitations
+* Banyan networks 榕树网络， Crossbar, other interconnection nets initially developed to 【connect processors in multiprocessor】
+* Advanced Design: Fragmenting datagram into **fixed length cells**, switch cells through the fabric
+* Cisco 12000: Switches 60 Gbps through the interconnection network
 ### 2.3 Output Port Processing
+a. Input Port Queueeing
+* Fabric slower than input ports combined -> queueing may occur at input queues
+  * Queueing delay and loss due to **input buffer overflow**
+* Head-of-the-Line(HOL) blocking: queued datagram at front of queue prevents others in queue from moving forward
+b. Output Port
+* Buffering required when datagrams arrive from fabric faster than the transmission rate.
+  * Datagrams(Packets) can be lost due to congestion, lack of buffers
+* Scheduling Discipline chooses among queued datagrams for transmission
+  * Priority Scheduling - who gets best performance, network neutrality
+
 
 
 ### 2.5 Packet Scheduling (notes23)
-a. FIFO
-b. Priority
+* Scheduling: Choose next packet to send on link
+a. FIFO: send in order of arrival to queue
+* Real-World example: Service Centers
+* Discard policy: if packet arrives to full queue: who to discard?
+  * Tail drop: drop arriving packet
+  * Priority: drop/remove on priority basis
+  * Random: drop/remove randomly
+
+b. Priority: Send highest priority queued packet
+* Multiple classes, with different priorities
+  * Class may depend on marking or other header info
+    * e.g. IP source/dest, port numbers, etc
+    
 c. Round Robin
-d. WFQ
+d. WFQ ( Weighted Fair Queueing)
+
+
+
 
 ## 3. The Internet Protocol(IP) (note 28)
 - **Figure 4.16 - IPv4 datagram format**
 ### 3.1 IPv4 Datagram Format
-- Version number
-- Header length
-- Type of Service
-- Datagram Length
+- Version number: IP protocol version number
+- Header length: bytes
+- Type of Service: "type" of data
+- Datagram Length: bytes
 ---
-- Identifier, flags, fragmentation offset
-- Time-to-live
+- 16-bit Identifier, flags, fragmentation offset: for fragmentation/reeassembly
+- Time-to-live：max number remaining hops (decremented at each router)
+- upper layer: upper layer protocol to deliver payload to
+- header checksum
 - Protocol 
 - 
 ### 3.2 IPv4 Datagram Fragmentation and Reassembly
