@@ -144,7 +144,14 @@ d. WFQ ( Weighted Fair Queueing)
 a.  
 b.  
 c. CIDR  
-d. DHCP  
+d. DHCP：Dynamic Host Configuration Protocol
+* Goal: allow host to **dynamically** obtain its IP address from network server when it joins network
+  * Can renew its lease on address in use
+  * Allows reuse of address (only hold address while connected/"on")
+  * Support for mobile users who want to join network (more shortly)
+* DHCP overview:
+  * Host broadcasts **"DHCP discover** msg [optional]
+  
 
 ### 3.4 Network Address Translation (NAT) (note 49 - 55)
 
