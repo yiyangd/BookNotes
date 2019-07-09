@@ -149,8 +149,12 @@ d. DHCP
 ### 3.4 Network Address Translation (NAT) (note 49 - 55)
 
 
+### 3.5 IPv6 (note 1-10)
+* 
+b.
 
 
 
-
-## 4. Generalized Forwarding and SDN
+## 4. Generalized Forwarding and SDN (note11 - 19)
+* Each router contains a **flow table** that is computed and distributed by a **logically centralized routing controller**
+###
