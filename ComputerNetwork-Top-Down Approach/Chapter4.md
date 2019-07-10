@@ -156,7 +156,24 @@ d. DHCP：Dynamic Host Configuration Protocol
   
 
 ### 3.4 Network Address Translation (NAT) (note 49 - 55)
-
+* Motivation: local network uses just one IP address as far as outside world is concerned:
+  * Range of addresses not needed from ISP
+  * Can change address of devices in local network without notifying outside world
+  * Can change ISP without changing addresses of devices in local network
+  * Devices inside local net not explicitly addressable, visible by outside world
+* Implementation: NAT router must:
+  * **Outgoing datagrams: replace** (source IP address, port number) of every outgoing datagram to (NAT IP address, new port number) ... remote clients/servers will respond using (NAT IP address, new port number) as destination address
+  * **Remember (in NAT translation table)** every (source IP address, port number) to (NAT IP address, new port number) translation pair
+  * **Incoming datagrams: replace** (NAT IP address, new port number) in destination fields of every incoming datagram with corresponding (source IP address, port #) stored in NAT table
+* 16-bit port-number field:
+  * 60000 simultaneous connections with a single LAN-side address
+* NAT is controversial: 
+  * Routers should only process up to layer 3
+  * Address shortage should be solved by IPv6
+  * Violates end-to-end argument
+    * NAT possibility must be taken into account by app designers
+      * e.g. P2P applications
+  * NAT traversal: what if client wants to connect to server behind NAT?
 
 ### 3.5 IPv6 (note 1-10)
 * 
