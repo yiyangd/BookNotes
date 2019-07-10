@@ -142,10 +142,31 @@ d. WFQ ( Weighted Fair Queueing)
 - Protocol 
 - 
 ### 3.2 IPv4 Datagram Fragmentation and Reassembly
+* Network links have MTU (max.transfer size) - largest possible link-level frame
+  * different link types, different MTUs
+* Large IP datagram divided(fragmented) within net
+  * One datagram becomes several datagrams
+  * "Reassembled" only at final destination
+  * IP header bits used to identify, order related fragments
+
 ### 3.3 IPv4 Addressing(note 32)
-a.  
-b.  
-c. CIDR  
+a. Intro
+b. Subnets
+* IP address:
+  * subnet part - high order bits
+  * host part - low order bits 
+* what's a subnet?
+  * device interfaces with same subnet part of IP address
+  * can physically reach each other **without intervening router** 
+* To determine the subnets, detach each interface from its host or router, creating islands of isolated networks, each of them is called a subnet
+c. CIDR:
+* Subnet portion of address of arbitrary length
+* Address format: a.b.c.d/x, where x is # bits in subnet portion of address
+* How does a **host** get IP address?
+  * Hard-coded by system admin in a file
+    * Windows
+    * Unix: /etc/rc.config
+  * DHCP: dynamically get address from as server - "plug-and-play"
 d. DHCP：Dynamic Host Configuration Protocol
 * Goal: allow host to **dynamically** obtain its IP address from network server when it joins network
   * Can renew its lease on address in use
@@ -153,7 +174,15 @@ d. DHCP：Dynamic Host Configuration Protocol
   * Support for mobile users who want to join network (more shortly)
 * DHCP overview:
   * Host broadcasts **"DHCP discover** msg [optional]
-  
+  * DHCP server responds with **"DHCP offer"** msg [optional]
+  * Host requests IP address: **"DHCP request"** msg
+  * DHCP server sends address: **"DHCP ack"** msg
+* DHCP can return more than just allocated IP address on subnet:
+  * address of first-hop router for client
+  * name and IP address of DNS server
+  * network mask (indicating network versus host portion of address)
+* Example
+e. Hierarchical Addressing: Route Aggregation  
 
 ### 3.4 Network Address Translation (NAT) (note 49 - 55)
 * Motivation: local network uses just one IP address as far as outside world is concerned:
@@ -176,7 +205,7 @@ d. DHCP：Dynamic Host Configuration Protocol
   * NAT traversal: what if client wants to connect to server behind NAT?
 
 ### 3.5 IPv6 (note 1-10)
-* 
+a.
 b.
 
 
