@@ -14,7 +14,8 @@ a:
 * When datagram in nth set arrives to nth router:
   * router discards datagram and sends source ICMP message (type II, code 0)
   * ICMP message include name of router & IP address
-* When ICMP message arrives, source records RTTs：
+* When ICMP message arrives, source records RTTs  
+
 b. Stopping Criteria:
 * UDP segment eventually arrives at destination host
 * Destination returns ICMP "port unreachable" message (type 3, code 3)
