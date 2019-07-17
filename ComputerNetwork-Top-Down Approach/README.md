@@ -30,5 +30,10 @@ Chapter 4 - The Network Layer (P305, Stanford Moocs Unit 6 - Routing)
 * 4.1 Introduction
 * 4.2 
 
-Chapter 5 - The Link Layer: Links, Access Networks, and LANs (P433, Unit 7 - Lower Layers)
-* 5.1
+
+Chapter 6 - The Link Layer: Links, Access Networks, and LANs (P433, Unit 7 - Lower Layers)
+- 6.2. Error-Detection and Correction Techniques
+- 6.3. Multiple access protocols 
+- 6.4. LANs(Local Area Networks)
+- 6.5. Link Virtualization: MPLS
+- 6.6. Data Center Networking
