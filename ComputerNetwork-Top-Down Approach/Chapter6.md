@@ -29,14 +29,24 @@
 #### 1.2 Where is the Link Layer Implemented?
 * In each and every host
 * Link Layer implemented in "adaptor" (**network interface card:NIC**) or on a chip
-  * Ethernet card
-
-* **Adaptors Communicating:
+  * Ethernet card, 802.11 card; Ethernet chipset
+  * implements link, physical layer
+* Attaches into host's system buses
+* Combination of hardware, software, firmware
+* **Adaptors Communicating**:
   * Sending side:
-
-* Receiving side:
+    > The Controller takes a datagram from host memory and encapsulates it in a link-layer frame (filling in the frame's various fields lke error checking bits, rdt, flow control, etc), and then transmits the frame into the communication link, following the link-access protocol. 
+  * Receiving side:
+    > A controller receives the entire frame, and extracts the network-layer datagram. If the link-layer performs error detection, then it is the sending controller that sets the error-detection bits in the frame header and it is the receiving controller that performs error detection.
 ### 2. Error-Detection and Correction Techniques
+* EDC = Error Detection and Correction bits (redundancy)
+* D = Data protected by error checking, may include header fields
+* Error detection not 100% reliable!
+  * Protocol may miss some errors, but rarely
+  * Larger EDC field yields better detection and correction
+#### 2.1 Parity Checks
 ### 3. Multiple access protocols 
+
 ### 4. LANs(Local Area Networks)
 
 
