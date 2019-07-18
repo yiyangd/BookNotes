@@ -38,6 +38,7 @@
     > The Controller takes a datagram from host memory and encapsulates it in a link-layer frame (filling in the frame's various fields lke error checking bits, rdt, flow control, etc), and then transmits the frame into the communication link, following the link-access protocol. 
   * Receiving side:
     > A controller receives the entire frame, and extracts the network-layer datagram. If the link-layer performs error detection, then it is the sending controller that sets the error-detection bits in the frame header and it is the receiving controller that performs error detection.
+    
 ### 2. Error-Detection and Correction Techniques
 * EDC = Error Detection and Correction bits (redundancy)
 * D = Data protected by error checking, may include header fields
@@ -45,6 +46,25 @@
   * Protocol may miss some errors, but rarely
   * Larger EDC field yields better detection and correction
 #### 2.1 Parity Checks
+#### 2.2 Checksumming Methods
+* Goal: detect "errors" (e.g. flipped bits 0 -> 1 or 1 -> 0) in transmitted packet (used at transport layer only)
+* Sender:
+  * Treat segment contents as sequence of 16-bit integers
+  * Checksum: addition (1's complement sum) of segment contents
+  * Sender puts checksum value into UDP checksum field
+* Receiver:
+  * Compute checksum of received segment
+  * Check if computed checksum equals checksum field value:
+    * NO - error detected
+    * YES - no error detected
+    * but maybe errors nonetheless??
+* [Example](https://en.wikibooks.org/wiki/Communication_Networks/TCP_and_UDP_Protocols/UDP#Checksum_Calculation)
+#### 2.3 Cyclic Redundancy Check (CRC)
+* 
+
+
+### Review Question for 1-2:
+R1
 ### 3. Multiple access protocols 
 
 ### 4. LANs(Local Area Networks)
