@@ -51,7 +51,7 @@
 * Sender:
   * Treat segment contents as sequence of 16-bit integers
   * Checksum: addition (1's complement sum) of segment contents
-  * Sender puts checksum value into UDP checksum field
+  * Sender puts `checksum value` into UDP checksum field
 * Receiver:
   * Compute checksum of received segment
   * Check if computed checksum equals checksum field value:
@@ -61,7 +61,7 @@
 * [Example](https://en.wikibooks.org/wiki/Communication_Networks/TCP_and_UDP_Protocols/UDP#Checksum_Calculation)
 #### 2.3 Cyclic Redundancy Check (CRC)
 * 
-
+*
 
 ### Review Question for 1-2:
 R1
