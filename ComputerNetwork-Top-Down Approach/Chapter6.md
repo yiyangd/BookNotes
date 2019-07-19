@@ -66,7 +66,29 @@
 ### Review Question for 1-2:
 R1
 ### 3. Multiple access protocols 
+a. two
+b. Mul
+c. An ideal multiple access protocol
+- Given: 
+- Desiderata:
+  1.  When one node wants to transmit, it can send at rate R.  
+  2. When  
+  3.  
+  4.  22   34
+#### 3.1 Channel partitioning (MAC) protocols
+a. TDMA: time division multiple access
+- Access to channel in "rounds"
+- Each station gets fixed length slot (length = )
+- Unused slots go idle
+- Example: 6-station LAN, 1, 3, 4 have packets to send, sl
+b. FDMA: frequency division multiple access
 
+#### 3.2 Random Access Protocols
+- When node has packet to send
+- two 
+- Random access MAC protocol specifies:
+  * How to detect collisions 检测冲突
+  * How to recover from collisions (e.g. via delayed retransmissions)
 ### 4. LANs(Local Area Networks)
 
 
