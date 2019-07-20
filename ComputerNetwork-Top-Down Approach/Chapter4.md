@@ -33,10 +33,10 @@
     * Restrictions on changes in inter-packet spacing
   - TODO: 5 models： best effort, CBR, VBR, ABR, UBR
     
-  
+  > The Internet's network layer provides a single service, known as **best-effort** service. With best-effort service, pakckets are neither guaranteed to be received in the order in which they were sent, nor is their eventual delivery even guaranteed. There is no guarantee on the end-to-end delay nor is there a minimal bandwidth guarantee. ( no services)
   
 ## 2. What's inside a router
-- **Figure in notes**
+- **Figure of generic router architecturein notes**
 ### 2.1 Input Port Processing and Destination-Based Forwarding
 - **Figure4.5 in books**
 - Input Port Functions:
@@ -44,11 +44,11 @@
   * Link layer protocol
   * Lookup, forwarding queueing: 
     * Decentralized Switching: 
-      * Using header field values, `lookup` output port using forwarding table input port memory (**"match plus action"**)
-      * Goal: complete input port processing at "line speed"
+      * Using `header field values`, `lookup` output port using forwarding table input port memory (**"match plus action"**)
+      * **Goal**: complete input port processing at "line speed"
       * Queuing: if datagrams arrive faster than forwarding rate into switch fabric
-      * destination-based forwarding: forward based `only` on destination IP address (traditional)
-      * Generalized forwarding: forward based on `any set of` header field values
+      * **destination-based forwarding**: forward based `only` on destination IP address (traditional)
+      * **Generalized forwarding**: forward based on `any set of` header field values
 - Destination-Based Forwarding Table
   * ranges divide up so nicely
   
@@ -59,9 +59,9 @@
 |00011001-00011111|2|
 |otherwise|3|
 
-- Longest Prefix Maching
+- Longest Prefix Matching (when ranges don't divide up so nicely)
   * When looking for forwarding table entry for given destination address, use `longest` address prefix that matches destination address.
-  * when there are multiple matches, the `router` uses the longest prefix matching rule
+  * when there are multiple matches, the `router` uses the `longest prefix` matching rule
 
 |Destination Address Range|Link Interface| 
 |---|---|
@@ -74,7 +74,7 @@
 
 ### 2.2 Switching(notes16)
 * Transfer packet from input buffer to appropriate output buffer
-* Switching rate: rate at which packets can be transfer from inputs to outputs
+* Switching rate: rate at which   packets can be transfer from inputs to outputs
   * Often measured as `multiple of input/output` line rate
   * N inputs: switching rate `N times` line rate desirable
 * Three types of switching fabrics:
@@ -99,12 +99,14 @@ a. Input Port Queueeing
 * Fabric slower than input ports combined -> queueing may occur at input queues
   * Queueing delay and loss due to **input buffer overflow**
 * Head-of-the-Line(HOL) blocking: queued datagram at front of queue prevents others in queue from moving forward
+
 b. Output Port
 * Buffering required when datagrams arrive from fabric faster than the transmission rate.
   * Datagrams(Packets) can be lost due to congestion, lack of buffers
 * Scheduling Discipline chooses among queued datagrams for transmission
   * Priority Scheduling - who gets best performance, network neutrality
-
+* buffering when arrival rate via switch exceeds output line speed
+* Queueing(delay) and loss due to output ports buffer overflow!
 
 
 ### 2.5 Packet Scheduling (notes23)
@@ -135,7 +137,7 @@ d. WFQ ( Weighted Fair Queueing)
 - Type of Service: "type" of data
 - Datagram Length: bytes
 ---
-- 16-bit Identifier, flags, fragmentation offset: for fragmentation/reeassembly
+- 16-bit Identifier, flags, fragmentation offset: for fragmentation/reassembly
 - Time-to-live：max number remaining hops (decremented at each router)
 - upper layer: upper layer protocol to deliver payload to
 - header checksum
@@ -148,9 +150,11 @@ d. WFQ ( Weighted Fair Queueing)
   * One datagram becomes several datagrams
   * "Reassembled" only at final destination
   * IP header bits used to identify, order related fragments
+* Example
 
 ### 3.3 IPv4 Addressing(note 32)
 a. Intro
+
 b. Subnets
 * IP address:
   * subnet part - high order bits
@@ -159,7 +163,8 @@ b. Subnets
   * device interfaces with same subnet part of IP address
   * can physically reach each other **without intervening router** 
 * To determine the subnets, detach each interface from its host or router, creating islands of isolated networks, each of them is called a subnet
-c. CIDR:
+
+c. CIDR: Classless InterDomain Routing
 * Subnet portion of address of arbitrary length
 * Address format: a.b.c.d/x, where x is # bits in subnet portion of address
 * How does a **host** get IP address?
@@ -167,6 +172,7 @@ c. CIDR:
     * Windows
     * Unix: /etc/rc.config
   * DHCP: dynamically get address from as server - "plug-and-play"
+  
 d. DHCP：Dynamic Host Configuration Protocol
 * Goal: allow host to **dynamically** obtain its IP address from network server when it joins network
   * Can renew its lease on address in use
