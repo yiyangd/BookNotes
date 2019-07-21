@@ -89,6 +89,11 @@ b. FDMA: frequency division multiple access
 - Random access MAC protocol specifies:
   * How to detect collisions 检测冲突
   * How to recover from collisions (e.g. via delayed retransmissions)
+- Examples of random access MAC prototols:
+  * slotted ALOHA
+  * ALOHA
+  * CSMA, CSMA/CD, CSMA/CA
+  
 ### 4. LANs(Local Area Networks)
 
 
