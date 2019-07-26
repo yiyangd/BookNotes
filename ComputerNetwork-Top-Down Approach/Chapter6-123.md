@@ -137,7 +137,7 @@ a. Slotted ALOHA
   * Clock synchronization
 - Efficiency: Long-run fraction of successful slots (many nodes, all with many frames to send)
   * Suppose: N nodes with many frames to send, each transmits in slot with probability p.
-  * Prob that given node has success in a slot = p(1-p)<sup>N-1<sup>
+  * Prob that given node has success in a slot = p(1-p)<sup>N-1<sup>  
 b. Pure(unslotted)ALOHA
 - Simpler, no synchronization
 - When frame first arrives
