@@ -146,9 +146,3 @@ b. Pure(unslotted)ALOHA
 c. CSMA, CSMA/CD, CSMA/CA
 #### 3.3 Taking-Turns Protocols
 
-
-### 4. LANs(Local Area Networks)
-
-
-### 5. Link Virtualization: MPLS
-### 6. Data Center Networking
