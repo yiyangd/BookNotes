@@ -66,7 +66,14 @@
 ### Review Question for 1-2:
 R1
 ### 3. Multiple access protocols 
-a. two
+a. two types of links:
+- point-to-point
+  * PPP for dial-up access
+  * point-to-point link between Ethernet switch, host
+- broadcast (shared wire or medium)
+  * old-fashioned Ethernet
+  * upstream HFC
+  * 802.11 wireless LAN
 b. Mul
 c. An ideal multiple access protocol
 - Given: 
@@ -75,25 +82,71 @@ c. An ideal multiple access protocol
   2. When  
   3.  
   4.  22   34
+  
+d. MAC(Media Access Control) Protocols： Taxonomy
+#### 3 broad classes:
+* Channel Partitioning:
+  * Divide channel into smaller "pieces" (time slots, frequency, code)
+  * Allocate piece to node for exclusive use （独用）
+* Random Access
+  * Channel not divided, allow collisions
+  * “Recover“ from collisions
+* "Taking Turns"
+  * Nodes take turns, but nodes with more to send can take longer turns
+
 #### 3.1 Channel partitioning (MAC) protocols
 a. TDMA: time division multiple access
 - Access to channel in "rounds"
-- Each station gets fixed length slot (length = )
+- Each station gets fixed length slot (length = packet transmission time) in each round
 - Unused slots go idle
-- Example: 6-station LAN, 1, 3, 4 have packets to send, sl
+- Example: 6-station LAN, 1, 3, 4 have packets to send, slots 2, 5, 6 idle
 b. FDMA: frequency division multiple access
+- Channel spectrum divided into frequency bands
+- Each station assigned fixed frequency band
+- Unused transmission time in frequency bands go idle
+- Example: 6-station LAN, 1, 3, 4 have packet to send, frequency bands 2, 5, 6 idle 
 
 #### 3.2 Random Access Protocols
 - When node has packet to send
-- two 
+  * Transmit at full channel data rate R
+  * No a priori coordination among nodes
+- two or more transmitting node -> "collision"
 - Random access MAC protocol specifies:
   * How to detect collisions 检测冲突
   * How to recover from collisions (e.g. via delayed retransmissions)
 - Examples of random access MAC prototols:
-  * slotted ALOHA
-  * ALOHA
-  * CSMA, CSMA/CD, CSMA/CA
-  
+a. Slotted ALOHA
+- Assumptions:
+  * All frames same size
+  * Time divided into equal size slots (time to transimit 1 frame)
+  * Nodes start to transmit only slot beginning
+  * Nodes are synchronized
+  * If 2 or more nodes transmit in slot, all nodes detect collision
+- Operation:
+  * When node obtains fresh frame, transmits in next slot
+    * If no collision: node can send new frame in next slot
+    * If collision: node retransmits frame in each subsequent slot with prob.p until success
+- Pros:
+  * Single active node can continuously transmit at full rate of channel
+  * Highly decentralized: only slots in nodes need to be in sync
+  * Simple
+- Cons:
+  * Collisions, wasting slots
+  * Idle slots
+  * Nodes may be able to detect collision in less than time to transmit packet
+  * Clock synchronization
+- Efficiency: Long-run fraction of successful slots (many nodes, all with many frames to send)
+  * Suppose: N nodes with many frames to send, each transmits in slot with probability p.
+  * Prob that given node has success in a slot = p(1-p)<sup>N-1<sup>
+b. Pure(unslotted)ALOHA
+- Simpler, no synchronization
+- When frame first arrives
+  * Transmit immediately
+-
+c. CSMA, CSMA/CD, CSMA/CA
+#### 3.3 Taking-Turns Protocols
+
+
 ### 4. LANs(Local Area Networks)
 
 
