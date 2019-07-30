@@ -138,11 +138,21 @@ a. Slotted ALOHA
 - Efficiency: Long-run fraction of successful slots (many nodes, all with many frames to send)
   * Suppose: N nodes with many frames to send, each transmits in slot with probability p.
   * Prob that given node has success in a slot = p(1-p)<sup>N-1<sup>  
+  * 
+ > That is, when a large number of nodes have many frames to transmit, then (at best) only 37 percent of the slots do useful work. Thus the effective transmission rate of channel is not R bps but only 0.37*R bps!!
+ > 37% of slots go empty and 26% of slots have collisions 
+ 
 b. Pure(unslotted)ALOHA
 - Simpler, no synchronization
 - When frame first arrives
   * Transmit immediately
 -
-c. CSMA, CSMA/CD, CSMA/CA
+c. CSMA
+* Carrier Sense Multiple Access (CSMA)载波侦听多路访问
+  * **Listen before transmit:** Carrier Sensing
+  * **If channel sensed busy, defer transmission:** Collision Detection(CD)
+    * If channel sensed idle: transmit entire frame
+d. CSMA/CD
+* 
 #### 3.3 Taking-Turns Protocols
 
