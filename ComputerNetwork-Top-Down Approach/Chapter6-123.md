@@ -115,6 +115,7 @@ b. FDMA: frequency division multiple access
   * How to detect collisions 检测冲突
   * How to recover from collisions (e.g. via delayed retransmissions)
 - Examples of random access MAC prototols:
+
 a. Slotted ALOHA
 - Assumptions:
   * All frames same size
